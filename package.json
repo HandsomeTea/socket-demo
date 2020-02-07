@@ -1,0 +1,44 @@
+{
+  "name": "socket",
+  "version": "1.0.0",
+  "description": "基本socket服务创建，便于使用",
+  "main": "index.js",
+  "scripts": {
+    "client": "node ./client.js",
+    "server": "node ./server.js",
+    "upgrade": "./node_modules/.bin/npm-check -u",
+    "eslint": "./node_modules/.bin/eslint ./ --fix",
+    "check": "npm run eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HandsomeTea/socket.git"
+  },
+  "keywords": [
+    "socket"
+  ],
+  "author": "coco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HandsomeTea/socket/issues"
+  },
+  "homepage": "https://github.com/HandsomeTea/socket#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "husky": "^4.2.1",
+    "lint-staged": "^10.0.7",
+    "npm-check": "^5.9.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "git status"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "npm run eslint"
+    ]
+  }
+}
