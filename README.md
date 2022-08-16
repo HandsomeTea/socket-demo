@@ -1,2 +1,2 @@
 # socket
-基本socket服务创建，便于使用
+基本nodejs原生的socket服务，便于使用
